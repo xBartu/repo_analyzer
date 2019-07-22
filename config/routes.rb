@@ -3,5 +3,5 @@ Rails.application.routes.draw do
 
   root to: 'dashboard#index'
 
-  resources :analysis
+  resources :analysis, only: :index
 end
