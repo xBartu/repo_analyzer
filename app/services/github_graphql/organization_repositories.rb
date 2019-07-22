@@ -1,6 +1,6 @@
 module GithubGraphql
   class OrganizationRepositories < Base
-    def all_for(organizaton_name = 'google')
+    def repositories_of(organizaton_name = 'google')
       repos = []
       has_next = true
       end_cursor = ''
