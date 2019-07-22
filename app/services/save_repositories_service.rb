@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# In use on a rake task
 class SaveRepositoriesService
   attr_reader :repository_service, :organization, :adapter
 
@@ -15,8 +16,8 @@ class SaveRepositoriesService
     # create a error class here
     raise 'Organization is not created, please create it first' unless organization.present?
 
-    repository_service.repositories_of(organization_name).each do |repo|
-      sub_repo = Repository.find_or_initialize(github_id: reop['id'])
+    repository_service.repositories_of(organization.name).each do |repo|
+      sub_repo = Repository.find_or_initialize_by(github_id: repo['id'])
 
       sub_repo              = adapter.adapted_object(sub_repo, repo)
       sub_repo.organization = organization
