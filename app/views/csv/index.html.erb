@@ -1,0 +1,10 @@
+<% attr_count = @attributes.count %>
+<% @attributes.each_with_index do |attr, index| %>
+  <%= attr_count == index + 1 ? "#{attr}":"#{attr}," %>
+<% end %>
+<% @repositories.each do |repository| %>
+  <br>
+  <% @attributes.map { |attr| repository.send(attr) }.each_with_index do |val, index| %>
+    <%= attr_count == index + 1 ? "#{val}":"#{val}," %>
+  <% end %>
+<% end %>

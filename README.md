@@ -27,6 +27,8 @@ Now you can run your service!
 
 `domain/csv.csv` - You can download the list of repositories in a csv format.
 
+`domain/csv` - You can see the list of repositories in a csv format.
+
 ## Further Steps
 
 1- Currently, we do not have proper tests. Some tests are using the real http!
