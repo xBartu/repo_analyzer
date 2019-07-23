@@ -1,1 +1,6 @@
 <p> Hi, I am a repo analysis tool. I am now only support GitHub and its Gooogle organization, I am to show the top and least used languages. Please, have a look at my readme for further information.</p>
+
+<p> 
+  To see the most and least used programming language: <%= link_to 'Most used language list', analysis_index_path %> <br>
+  To download the list of open sources by google in a csv file: <%= link_to 'list', csv_index_path(format: :csv) %> 
+</p>
