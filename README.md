@@ -1,24 +1,28 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## How to install
 
-Things you may want to cover:
+Please follow the order as follow:
 
-* Ruby version
+Before starting, please define your api key in a enviorement variable.
+` export GITHUB_API_KEY=xxx-xxx-x-xx`
 
-* System dependencies
 
-* Configuration
 
-* Database creation
+```
+git clone git@github.com:xBartu/repo_analyzer.git 
+bundle
+rake db:create
+rake db:migrate
+rake db:seed
+rake github_task:update_google_repositories
+```
 
-* Database initialization
+Now you can run your service!
 
-* How to run the test suite
+## Further Steps
 
-* Services (job queues, cache servers, search engines, etc.)
+1- Currently, we do not have proper tests. Some tests are using the real http!
 
-* Deployment instructions
+2- As google and others opensource something new frequently, you need to run 'rake github_task:update_google_repositories' command or newly introduced rake commands. To avoid, you can use background task quest like sidekiq.
 
-* ...
