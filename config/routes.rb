@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   root to: 'dashboard#index'
 
   resources :analysis, only: :index
+  resources :csv, only: :index
 end

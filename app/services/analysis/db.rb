@@ -17,7 +17,7 @@ module Analysis
     def most_used_x_programming_languages(x = 5)
       prepare_ordered_list
       length = ordered_languages.length
-      ordered_languages[(length-x)..length].reverse
+      (ordered_languages[(length - x)..length].presence || []).reverse
     end
 
     def least_used_x_programming_languages(x = 5)
