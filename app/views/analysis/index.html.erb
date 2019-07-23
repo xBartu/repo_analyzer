@@ -1,1 +1,9 @@
-<p> There will be some tables </p>
+<%= render partial: 'analysis/title', locals: { title: 'The Most Used Languages at Google' } %>
+<div class="card">
+  <%= render partial: 'analysis/table', locals: { language_list: @most_used_languages } %>
+</div>
+
+<%= render partial: 'analysis/title', locals: { title: 'The Least Used Languages at Google' } %>
+<div class="card">
+  <%= render partial: 'analysis/table', locals: { language_list: @least_used_languages } %>
+</div>
