@@ -1,5 +1,17 @@
 # README
 
+## Assumptions
+
+The program assumes the followings
+
+```
+1- Most used languages and least used ones are different. There is no check for that but it may be case if an organization uses few languages.
+2- Used languages analysis just primary language. If the repo contains other languages js, asm or php.., we count one of them from githubs primary language.
+3- If Organization contains more than one most or least language, we picks some of them in no particular order. The order depends on the analysis service. Check the code. 
+
+
+```
+
 ## How to install
 
 Please follow the order as follow:
