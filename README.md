@@ -5,6 +5,7 @@
 Please follow the order as follow:
 
 Before starting, please define your api key in a enviorement variable.
+
 ` export GITHUB_API_KEY=xxx-xxx-x-xx`
 
 
@@ -19,6 +20,12 @@ rake github_task:update_google_repositories
 ```
 
 Now you can run your service!
+
+## usage
+
+`domain/analysis` - You can see google's most and least used programming language to open source.
+
+`domain/csv.csv` - You can download the list of repositories in a csv format.
 
 ## Further Steps
 
